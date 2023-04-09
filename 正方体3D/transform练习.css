@@ -1,0 +1,68 @@
+body {
+	perspective: 300px;
+}
+body:hover .box{
+	transform: rotateX(30deg) rotateY(170deg);
+}
+
+.box {
+	width: 400px;
+	height: 400px;
+	margin: 0 auto;
+	position: relative;
+	transform: rotateX(30deg) rotateY(60deg);
+	transform-style: preserve-3d;
+	transition: transform 1s;
+	
+}
+section {
+	width: 120px;
+	height: 120px;
+	line-height: 100px;
+	text-align: center;
+	font-size: 30px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -50px;
+	margin-top: -50px;
+	
+}
+
+
+
+/* 前面 向z轴正方向移动75px */
+section:nth-child(1){
+	background-color: black;
+	transform: translateZ(75px);
+}
+
+/* 后面 向z轴负方向移动75PX 并且将正面翻转到后面 */
+section:nth-child(2){
+	background-color: green;
+	transform: translateZ(-75px) rotateY(180deg);
+}
+
+/* 左面 向X轴负方向移动75px 并且将正面沿着y轴顺时针90deg */
+section:nth-child(3){
+	background-color: blue;
+	transform: translateX(75px) rotateY(90deg);
+}
+
+/* 右面 向X轴正方向移动75px 并且沿着y轴逆时针90deg */
+section:nth-child(4){
+	background-color: yellow;
+	transform: translateX(-75px) rotateY(-90deg);
+}
+
+/* 上面 沿着Y轴负方向75px 并且沿着X轴逆时针90deg */
+section:nth-child(5){
+	background-color: red;
+	transform: translateY(-75px) rotateX(-90deg);
+}
+
+/* 下面 沿着Y轴正方向移动75px 并且沿着x轴顺时针90deg */
+section:nth-child(6){
+	background-color: purple;
+	transform: translateY(75px) rotateX(90deg);
+}

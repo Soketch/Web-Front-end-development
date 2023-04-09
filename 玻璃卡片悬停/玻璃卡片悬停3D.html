@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>玻璃卡片悬停</title>
+	<link rel="stylesheet" href="玻璃卡片悬停3D.css">
+</head>
+<body>
+	<div class="container">
+		<div class="card">
+			<div class="content">
+				<h2>01</h2>
+				<h3>Card One</h3>
+				<p>Realistic glass card hover effect, realistic glass card hover effect,glass card hover effect</p>
+				<a href="#">Read More</a>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="card">
+			<div class="content">
+				<h2>02</h2>
+				<h3>Card Two</h3>
+				<p>Realistic glass card hover effect, realistic glass card hover effect,glass card hover effect</p>
+				<a href="#">Read More</a>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="card">
+			<div class="content">
+				<h2>03</h2>
+				<h3>Card Three</h3>
+				<p>Realistic glass card hover effect, realistic glass card hover effect,glass card hover effect</p>
+				<a href="#">Read More</a>
+			</div>
+		</div>
+	</div>
+	<!-- 让玻璃卡片有3D效果 引入一个外部JS库 vanilla-tilt.js -->
+	<script type="text/javascript" src="./js/vanilla-tilt.js"></script>
+	<script>
+		VanillaTilt.init(document.querySelectorAll(".card"), {
+			max:35,     // 最大倾斜度数
+			speed:400,  // 倾斜转化速度
+			glare:true, // 是否开启眩光效果
+			"max-glare":1 //最大眩光不透明度
+		})
+	</script>
+</body>
+</html>
